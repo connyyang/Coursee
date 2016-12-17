@@ -6,4 +6,15 @@
 //  Copyright © 2016 Conny Yang. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+struct Course{
+
+    var buttonImage: UIImage
+    var title: String
+    var instructor: String
+    var featuredImage: UIImage
+    var instructionVideoURL: URL
+    var description: String
+}

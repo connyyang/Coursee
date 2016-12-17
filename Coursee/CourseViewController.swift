@@ -9,27 +9,68 @@
 import UIKit
 
 class CourseViewController: UIViewController {
-
+  
+    @IBOutlet weak var chefButton: UIButton!
+    
+    @IBOutlet weak var iosButton: UIButton!
+    
+    
+    @IBOutlet weak var popButton: UIButton!
+    
+    var courseStore : [Course] = []
+    
+    var selectedCourse : Course!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        
+        courseStore = CourseStore.downloadNewCourses()
+        
+        self.updateUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func updateUI(){
+        chefButton.setImage(courseStore[0].buttonImage, for: [])
+        iosButton.setImage(courseStore[1].buttonImage, for: [])
+        popButton.setImage(courseStore[2].buttonImage, for: [])
     }
-    */
-
+    
+    @IBAction func chefCourseDidTap(_ sender: Any) {
+        let course = courseStore[0]
+        selectedCourse = course
+        
+        self.performSegue(withIdentifier: StoryBoard.showCourseDetails, sender: nil)
+    }
+    
+    @IBAction func iosCourseDidTap(_ sender: Any) {
+        let course = courseStore[1]
+        selectedCourse = course
+        
+        self.performSegue(withIdentifier: StoryBoard.showCourseDetails, sender: nil)
+    }
+    
+    
+    @IBAction func popCourseDidTap(_ sender: Any) {
+        let course = courseStore[2]
+        selectedCourse = course
+        
+        self.performSegue(withIdentifier: StoryBoard.showCourseDetails, sender: nil)
+    }
+    
+    struct StoryBoard{
+        static let showCourseDetails = "ShowCourseDetails"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == StoryBoard.showCourseDetails {
+            let courseDetailsViewController = segue.destination as? CourseDetailsViewController
+            
+            if courseDetailsViewController != nil
+            {
+                courseDetailsViewController!.course = self.selectedCourse
+            }
+            
+        }
+    }
 }

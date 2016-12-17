@@ -9,27 +9,50 @@
 import UIKit
 
 class CourseDetailsViewController: UIViewController {
+    
+    @IBOutlet weak var courseTitleLabel: UILabel!
+    
+    @IBOutlet weak var joinCourseButton: UIButton!
 
+    @IBOutlet weak var courseDetailsText: UITextView!
+    
+    @IBOutlet weak var courseFeaturedImageView: UIImageView!
+    
+    var course : Course!
+    
+    
+    @IBAction func playButtonDidTap(_ sender: Any) {
+    }
+    
+    @IBAction func joinButtonDidTap(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        courseTitleLabel.text = course.title
+        courseDetailsText.text = course.description
+        courseFeaturedImageView.image = course.featuredImage
+        joinCourseButton.setTitle("Join \(course.instructor)", for: [])
+        
+        joinCourseButton.layer.cornerRadius = 10
+        joinCourseButton.clipsToBounds = true
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    struct StoryBoard
+    {
+        static var presentVideo = "presentVideo"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == StoryBoard.presentVideo
+        {
+            if let playerViewController = segue.destination as? PlayerViewController
+            {
+                playerViewController.youtubeURL = course.instructionVideoURL
+            }
+            
+        }
     }
-    */
 
 }
