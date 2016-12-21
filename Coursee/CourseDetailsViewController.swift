@@ -25,6 +25,19 @@ class CourseDetailsViewController: UIViewController {
     }
     
     @IBAction func joinButtonDidTap(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "Congratulations!", message: "You have enrolled \(course.title) successfully!", preferredStyle: UIAlertControllerStyle.alert)
+        
+     
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+                self.dismiss(animated: true, completion: nil)
+            })
+       
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    
+        
     }
     
     override func viewDidLoad() {
@@ -36,7 +49,9 @@ class CourseDetailsViewController: UIViewController {
         joinCourseButton.setTitle("Join \(course.instructor)", for: [])
         
         joinCourseButton.layer.cornerRadius = 10
-        joinCourseButton.clipsToBounds = true
+        joinCourseButton.layer.masksToBounds = true
+        
+        self.navigationItem.title = course.instructor
     }
 
     struct StoryBoard

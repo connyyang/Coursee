@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5vb-kK-hIV">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,28 +19,25 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tip-IF-bgn">
+                            <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tip-IF-bgn">
                                 <rect key="frame" x="16" y="273" width="343" height="183"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="cover_chef"/>
                                 <connections>
                                     <action selector="iosCourseDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="liv-xH-alc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27a-xK-hWj">
+                            <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27a-xK-hWj">
                                 <rect key="frame" x="16" y="476" width="343" height="183"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="cover_chef"/>
                                 <connections>
                                     <action selector="popCourseDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xQo-wV-Bur"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Va9-Vl-elo">
+                            <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Va9-Vl-elo">
                                 <rect key="frame" x="16" y="64" width="343" height="183"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="cover_chef"/>
                                 <connections>
                                     <action selector="chefCourseDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="did-FY-6mA"/>
@@ -47,6 +45,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17254901960784313" green="0.21176470588235294" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tip-IF-bgn" secondAttribute="trailing" id="2xN-lL-c8E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Va9-Vl-elo" secondAttribute="trailing" id="6N2-oo-S8I"/>
+                            <constraint firstItem="Tip-IF-bgn" firstAttribute="top" secondItem="Va9-Vl-elo" secondAttribute="bottom" constant="26" id="7KD-sj-ymw"/>
+                            <constraint firstItem="Va9-Vl-elo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Md4-11-QYw"/>
+                            <constraint firstItem="Tip-IF-bgn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MmN-rQ-w30"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Va9-Vl-elo" secondAttribute="leading" id="QfC-1v-wy4"/>
+                            <constraint firstItem="Va9-Vl-elo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SxD-ha-ahk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Tip-IF-bgn" secondAttribute="leading" id="X3u-K3-IdU"/>
+                            <constraint firstItem="27a-xK-hWj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XNJ-Gk-aHt"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="27a-xK-hWj" secondAttribute="leading" id="dFS-NR-Qkj"/>
+                            <constraint firstItem="27a-xK-hWj" firstAttribute="top" secondItem="Tip-IF-bgn" secondAttribute="bottom" constant="20" id="h5I-pX-RIS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="27a-xK-hWj" secondAttribute="trailing" id="t9u-we-H2s"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Courses" id="43d-qG-AOq"/>
                     <connections>
@@ -69,37 +81,30 @@
                         <viewControllerLayoutGuide type="bottom" id="zfG-dX-rXM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ka7-3Q-bgD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chef" translatesAutoresizingMaskIntoConstraints="NO" id="ncM-Sx-4dH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chef" translatesAutoresizingMaskIntoConstraints="NO" id="ncM-Sx-4dH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTh-Be-G2H">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTh-Be-G2H">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0n-Zo-3Vt">
-                                        <rect key="frame" x="116" y="103" width="143" height="141"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="play"/>
-                                        <connections>
-                                            <action selector="playButtonDidTap:" destination="01e-Pz-cJN" eventType="touchUpInside" id="DBK-Bm-LJp"/>
-                                            <segue destination="z7M-n4-zaz" kind="presentation" identifier="presentVideo" id="N2f-qa-y22"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Become a Pro Chef" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6A-ZK-o93">
-                                        <rect key="frame" x="8" y="217" width="359" height="84"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Become a Pro Chef" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6A-ZK-o93">
+                                        <rect key="frame" x="8" y="217" width="304" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="PGd-Ya-KAr"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="29"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTE-vW-nfc">
-                                        <rect key="frame" x="8" y="327" width="359" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTE-vW-nfc">
+                                        <rect key="frame" x="8" y="314" width="304" height="39"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="mpc-N4-PQA"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Join the Chef Course">
                                             <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,19 +113,83 @@
                                             <action selector="joinButtonDidTap:" destination="01e-Pz-cJN" eventType="touchUpInside" id="AME-Mz-JGw"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tai-2y-8zZ">
-                                        <rect key="frame" x="8" y="389" width="359" height="261"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. dasfasdfasdfas dsafasdfa fdafasdfasdfasdf asdfasdfasdfasdfasdfasdfasdfasdfaadsfasdf</mutableString>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tai-2y-8zZ">
+                                        <rect key="frame" x="8" y="389" width="304" height="162"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="261" id="4Ns-zB-V39"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. dasfasdfasdfas dsafasdfa fdafasdfasdfasdf asdfasdfasdfasdfasdfasdfasdfasdfaadsfasdf</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="4Ns-zB-V39"/>
+                                            </mask>
+                                        </variation>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0n-Zo-3Vt">
+                                        <rect key="frame" x="99.5" y="79" width="121" height="119"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="121" id="NRh-1c-eAk"/>
+                                            <constraint firstAttribute="height" constant="119" id="kB0-Ke-Dez"/>
+                                        </constraints>
+                                        <state key="normal" image="play"/>
+                                        <connections>
+                                            <action selector="playButtonDidTap:" destination="01e-Pz-cJN" eventType="touchUpInside" id="DBK-Bm-LJp"/>
+                                            <segue destination="z7M-n4-zaz" kind="presentation" identifier="presentVideo" id="N2f-qa-y22"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tai-2y-8zZ" secondAttribute="bottom" constant="17" id="1iF-eo-BkW"/>
+                                    <constraint firstItem="z6A-ZK-o93" firstAttribute="centerX" secondItem="bTh-Be-G2H" secondAttribute="centerX" id="3dE-lk-Fdd"/>
+                                    <constraint firstItem="tai-2y-8zZ" firstAttribute="top" secondItem="DTE-vW-nfc" secondAttribute="bottom" constant="36" id="7iq-U3-JKa"/>
+                                    <constraint firstItem="i0n-Zo-3Vt" firstAttribute="top" secondItem="bTh-Be-G2H" secondAttribute="top" constant="79" id="7kp-gm-yQb"/>
+                                    <constraint firstItem="DTE-vW-nfc" firstAttribute="top" secondItem="z6A-ZK-o93" secondAttribute="bottom" constant="13" id="Foy-d8-R41"/>
+                                    <constraint firstItem="z6A-ZK-o93" firstAttribute="leading" secondItem="bTh-Be-G2H" secondAttribute="leading" constant="8" id="OrR-8H-rhL"/>
+                                    <constraint firstItem="DTE-vW-nfc" firstAttribute="leading" secondItem="bTh-Be-G2H" secondAttribute="leading" constant="8" id="USg-9j-XjN"/>
+                                    <constraint firstItem="tai-2y-8zZ" firstAttribute="centerX" secondItem="bTh-Be-G2H" secondAttribute="centerX" id="WUZ-D5-fMH"/>
+                                    <constraint firstItem="DTE-vW-nfc" firstAttribute="centerX" secondItem="bTh-Be-G2H" secondAttribute="centerX" id="Wop-yV-qnP"/>
+                                    <constraint firstAttribute="trailing" secondItem="z6A-ZK-o93" secondAttribute="trailing" constant="8" id="YHL-Jj-zhZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="tai-2y-8zZ" secondAttribute="trailing" constant="8" id="bE1-tT-eOv"/>
+                                    <constraint firstItem="DTE-vW-nfc" firstAttribute="centerY" secondItem="bTh-Be-G2H" secondAttribute="centerY" id="eBu-6c-UAS"/>
+                                    <constraint firstAttribute="bottom" secondItem="tai-2y-8zZ" secondAttribute="bottom" constant="17" id="evo-Af-3Yh"/>
+                                    <constraint firstItem="tai-2y-8zZ" firstAttribute="leading" secondItem="bTh-Be-G2H" secondAttribute="leading" constant="8" id="f9v-aP-qjs"/>
+                                    <constraint firstItem="tai-2y-8zZ" firstAttribute="top" secondItem="DTE-vW-nfc" secondAttribute="bottom" constant="36" id="ih9-bh-uKq"/>
+                                    <constraint firstItem="z6A-ZK-o93" firstAttribute="top" secondItem="i0n-Zo-3Vt" secondAttribute="bottom" constant="19" id="jkv-pQ-9Ov"/>
+                                    <constraint firstAttribute="trailing" secondItem="DTE-vW-nfc" secondAttribute="trailing" constant="8" id="thV-rI-7Tl"/>
+                                    <constraint firstItem="DTE-vW-nfc" firstAttribute="leading" secondItem="bTh-Be-G2H" secondAttribute="leading" constant="8" id="uZc-j0-bdl"/>
+                                    <constraint firstItem="tai-2y-8zZ" firstAttribute="top" secondItem="DTE-vW-nfc" secondAttribute="bottom" constant="36" id="vDW-TB-qrO"/>
+                                    <constraint firstItem="i0n-Zo-3Vt" firstAttribute="centerX" secondItem="bTh-Be-G2H" secondAttribute="centerX" id="vdN-ku-BVP"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Wop-yV-qnP"/>
+                                        <exclude reference="eBu-6c-UAS"/>
+                                        <exclude reference="1iF-eo-BkW"/>
+                                        <exclude reference="ih9-bh-uKq"/>
+                                        <exclude reference="vDW-TB-qrO"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ncM-Sx-4dH" secondAttribute="trailing" id="34h-jM-bvu"/>
+                            <constraint firstItem="bTh-Be-G2H" firstAttribute="top" secondItem="Ka7-3Q-bgD" secondAttribute="top" id="9ER-wm-QCa"/>
+                            <constraint firstItem="ncM-Sx-4dH" firstAttribute="leading" secondItem="Ka7-3Q-bgD" secondAttribute="leading" id="CeJ-pL-C1I"/>
+                            <constraint firstAttribute="trailing" secondItem="bTh-Be-G2H" secondAttribute="trailing" id="ExV-N0-nRy"/>
+                            <constraint firstItem="bTh-Be-G2H" firstAttribute="leading" secondItem="Ka7-3Q-bgD" secondAttribute="leading" id="Ttb-A4-EPq"/>
+                            <constraint firstItem="ncM-Sx-4dH" firstAttribute="top" secondItem="Ka7-3Q-bgD" secondAttribute="top" id="U0Q-1C-geI"/>
+                            <constraint firstItem="zfG-dX-rXM" firstAttribute="top" secondItem="bTh-Be-G2H" secondAttribute="bottom" id="VTD-Lv-Rii"/>
+                            <constraint firstItem="bTh-Be-G2H" firstAttribute="leading" secondItem="Ka7-3Q-bgD" secondAttribute="leading" id="Yzw-NS-DsZ"/>
+                            <constraint firstItem="zfG-dX-rXM" firstAttribute="top" secondItem="bTh-Be-G2H" secondAttribute="bottom" id="jBT-EJ-YXl"/>
+                            <constraint firstAttribute="trailing" secondItem="bTh-Be-G2H" secondAttribute="trailing" id="ojo-Md-yrE"/>
+                            <constraint firstItem="zfG-dX-rXM" firstAttribute="top" secondItem="ncM-Sx-4dH" secondAttribute="bottom" id="tq1-0s-xxG"/>
+                            <constraint firstItem="bTh-Be-G2H" firstAttribute="top" secondItem="Ka7-3Q-bgD" secondAttribute="top" id="wLK-5A-ffx"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="courseDetailsText" destination="tai-2y-8zZ" id="0cI-nR-Y76"/>
@@ -131,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yha-Kz-WDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1390" y="43"/>
+            <point key="canvasLocation" x="1389.5999999999999" y="42.728635682158924"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="TqI-ng-d9c">
@@ -142,7 +211,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YXC-gJ-dNW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uyc-Rr-Hxn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WbZ-Cy-lqI" customClass="YouTubePlayerView" customModule="Coursee" customModuleProvider="target">
@@ -154,6 +223,9 @@
                                 <rect key="frame" x="5" y="32" width="69" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeDidTap:" destination="z7M-n4-zaz" eventType="touchUpInside" id="WZF-fN-KSf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17254901960784313" green="0.21176470588235294" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
@@ -171,9 +243,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5vb-kK-hIV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8jw-0E-KOD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8jw-0E-KOD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.17254901960784313" green="0.21176470588235294" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
